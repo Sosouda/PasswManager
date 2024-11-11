@@ -55,8 +55,7 @@ struct SaveData Deshifrator(struct SaveData any, int n, char* secword){
         
     }
     fclose(secret);
-    int cnt =0;
-    if(strcmp(key,secword)){
+    if(strcmp(key,secword) == 1){
     for (int i = 0; i < n; i++) {
         for (int j = 0; any.login[i][j] != '\0'; j++) {
             any.login[i][j] = any.login[i][j] ^ (key[j] - 'A');
